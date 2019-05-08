@@ -169,6 +169,7 @@ class TheSpaghettiDetectivePlugin(
 
     def octoprint_settings(self):
         webcam = dict((k, self._settings.effective['webcam'][k]) for k in ('flipV', 'flipH', 'rotate90'))
+        _logger.info(webcam)
         return dict(webcam=webcam)
 
     def main_loop(self):
